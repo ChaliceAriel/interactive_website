@@ -1,0 +1,52 @@
+body {
+	display: 100%;
+	margin: 0;
+}
+h2 {
+	color: green;
+}
+
+#wrapper {
+	width: 100vw;
+	margin: 10%vw;
+	background-color: red;
+	z-index: -1;
+
+}
+
+#left {
+	background-color: #777;
+	background-image: url("skyscrapers.jpg");
+	background-size: cover;
+	background-position: center;
+	width: 50%;
+	height: 800px;
+	float: left;
+
+}
+
+
+#right {
+	background-color: #777;
+	background-image: url("city_plan.jpg");
+	background-size: cover;
+	background-position: right;
+	width: 50%;
+	height: 800px;
+	float: right;
+}
+
+#left:hover, #right:hover {
+	transform: scale(1.2,1.2);
+	transition-timing-function: .5s ease-in-out;
+	-webkit-transition-timing-function: .5s ease-in-out;
+
+}
+
+@media only screen and (max-width: 750px){
+
+	#left, #right {
+		width: 100%;
+		display: block;
+	}
+}
