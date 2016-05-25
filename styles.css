@@ -1,47 +1,204 @@
 body {
 	display: 100%;
-	margin: 0;
+	background-color: #333;
 }
-h2 {
-	color: green;
+
+h1, h2, h3, h4, i, p {
+	color: #fff;
+	text-align: center;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: normal;
+
+}
+
+button {
+	background-color: #fff;
+	color: #000;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: bold;
+	font-size: 1.2em;
+	width: max-content;
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+
+
+}
+
+footer {
+	padding: 30px 0;
+	height: 40px;
+	position: relative;
+	bottom:0;
+	background-color: #333;
+	width: 100vw;
+	text-align: center;
+}
+
+#social-icons ul li {
+	display: inline-block;
+	padding: 0 5px;
+}
+
+#social-icons {
+	width: content-width;
+	margin: auto;
 }
 
 #wrapper {
 	width: 100vw;
-	margin: 10%vw;
-	background-color: red;
-	z-index: -1;
-
+	margin: 0 auto;
+	padding: 0;
+	background-color: #fff;
+	z-index: 10;
+	overflow: hidden;
 }
 
 #left {
+	position: relative;
 	background-color: #777;
-	background-image: url("skyscrapers.jpg");
+	background-image: 
+		linear-gradient(rgba(0, 255, 255, 0.2), rgba(0, 255, 255, 0.2)),
+		url("skyscrapers.jpg");
 	background-size: cover;
 	background-position: center;
 	width: 50%;
-	height: 800px;
+	height: 650px;
 	float: left;
-
+	
 }
 
 
 #right {
+	position: relative;
 	background-color: #777;
-	background-image: url("city_plan.jpg");
+	background-image: 
+		linear-gradient(rgba(0, 255, 255, 0.2), rgba(0, 255, 255, 0.2)),
+		url("city_plan.jpg");
 	background-size: cover;
-	background-position: right;
+	background-position: left;
 	width: 50%;
-	height: 800px;
+	height: 650px;
 	float: right;
+	z-index: 2;
+
 }
+
+#color-overlay-left {
+   position: absolute;
+   top: 106px;
+   right: 0;
+   width: 95%;
+   height: 445px;
+   background-color: rgba(0,0,0, 0.75);
+   z-index: 1;
+}
+
+#color-overlay-right {
+   position: absolute;
+   top: 135px;
+   left: 0;
+   width: 95%;
+   height: 450px;
+   background-color: rgba(255, 153, 0, 0.7);
+   z-index: 1;
+}
+
 
 #left:hover, #right:hover {
-	transform: scale(1.2,1.2);
-	transition-timing-function: .5s ease-in-out;
-	-webkit-transition-timing-function: .5s ease-in-out;
+	-moz-transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
 
+    -webkit-transition: transform .75s ease-in-out;
+    -moz-transition:transform .75s ease-in-out;
+    -ms-transition:transform .75s ease-in-out;
 }
+
+i:hover {
+    -moz-transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+}
+
+footer i:hover {
+	color: rgb(255, 153, 0);
+}
+
+#left:hover {
+	z-index: 3;
+}
+
+
+#hex-right:before {
+    content: "";
+    width: 0; height: 0;
+    border-bottom: 60px solid rgb(0,128,128);
+    border-left: 104px solid transparent;
+    border-right: 104px solid transparent;
+    position: absolute;
+    top: -60px;
+}
+
+#hex-right {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 208px;
+    height: 120px;
+    background-color: rgb(0,128,128);
+    position: relative;
+    z-index: 2;
+}
+
+#hex-right:after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -60px;
+    border-top: 60px solid rgb(0,128,128);
+    border-left: 104px solid transparent;
+    border-right: 104px solid transparent;
+}
+
+#hex-left:before {
+    content: "";
+    width: 0; height: 0;
+    border-bottom: 60px solid rgb(255,153,0);
+    border-left: 104px solid transparent;
+    border-right: 104px solid transparent;
+    position: absolute;
+    top: -60px;
+}
+
+#hex-left {
+    margin-top: 551px;
+
+    width: 208px;
+    height: 120px;
+    background-color: rgb(255,153,0);
+    position: relative;
+    z-index: 2;
+}
+
+#hex-left:after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -60px;
+    border-top: 60px solid rgb(255,153,0);
+    border-left: 104px solid transparent;
+    border-right: 104px solid transparent;
+}
+
 
 @media only screen and (max-width: 750px){
 
@@ -49,4 +206,19 @@ h2 {
 		width: 100%;
 		display: block;
 	}
+
+	#color-overlay-left, #color-overlay-right {
+
+	    width: 90%;
+
+    }
+
+    #hex-right {
+    	margin-top: 585px;
+    	margin-left: 200px;
+    }
+
+    #hex-left {
+    	z-index: 5;
+    }
 }
