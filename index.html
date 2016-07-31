@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Economica:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 		<meta charset=utf-8>
 		<meta name=description content="">
 		<meta name=viewport content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="styles.css"> 
+		<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+		<script src="myjQuery.js"></script>
 		<script src="https://use.fontawesome.com/03f6a470ef.js"></script>
 
 
 		<title>Designers</title>
 	</head>
+
 	<body>
 		<div id ="wrapper">
+
+			<div id="menu-box">
+				<h3>Menu</h3>
+				<i id="menu-icon" class="fa fa-chevron-down fa-1x"></i>
+				<div id="menu-list">
+					<ul>
+						<li><a href="#">The Duval Building</a></li>
+						<li><a href="#">About the Architects</a></li>
+						<li><a href="#">Past & Future Projects</a></li>
+						<li><a href="#">Building Sustainable Cities</a></li>
+						<li><a href="#">Contact Duval Inc.</a></li>
+					</ul>
+				</div>	
+			</div>
 			<div id="left">
-				<div id="hex-left">
+				<div class="hex-wrapper">
+					<div id="hex-left">
+		        	</div>
 		        </div>
+
 				<div id="color-overlay-left">
 
-					<h1>Here is some text </h1>
-					<i class="fa fa-map-marker fa-3x"></i>
-					<h2>And some more</h2>
-					<button type="button">Click Here</button>
+					<h1>Duval Architecture<br><small>&</small> Design Inc.</h1>
+					<div id="the-architects">
+						<i class="fa fa-user fa-2x"></i>
+						<a href=""><h2>[The Architects]</h2></a>
+						<button>Learn more</button>
+					</div>
+									
 
 				</div>
 			</div>
 			<div id="right">
-				<div id="hex-right">
-					<p>how are you</p>
-				</div>
+
+
 				<div id="color-overlay-right">
-
-					<h1>Here is some more text</h1>
-					<i class="fa fa-cubes fa-3x"></i>
-					<h2>text ...</h2>
-					<button type="button">Click Here</button>
-
+					<div id="hex-right">
+					<p><br><br>The Duval Building<br>1035 Rue de la Chevrotière<br>Quebec City<br>Quebec, Canada</p>
 				</div>
+					<div id="spacer">
+					</div>
+					<i id="map-pin" class="fa fa-map-marker fa-3x"></i>
+					<a href=""><h2>[The Location]</h2></a>
+					<button>Learn more</button>
+				</div>
+				<h2 id="slogan">Building Sustainable Cities.<br>Advancing Technology.</h2>
 			</div>
-			
 		</div>
 	<footer>
-		<h4>Chalice Stevens &copy 2016. All Rights Reserved.</h4>
+		<h4>Chalice Stevens &copy 2016. All rights reserved.</h4>
 		<div id="social-icons">
 			<ul>
 				<li>
